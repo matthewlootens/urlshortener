@@ -2,11 +2,15 @@
 
 <html>
   <head>
-    <title>A Fancy Response Page
+    <title>A Fancy Response Page</title>
+    <link rel="stylesheet" href=" {{ url_for('static', filename='main.css') }} ">
     </title>
   </head>
   <body>
-    Here's a shortened URL to share:
-    <a href='{{ shortenedURL }}'> {{ shortenedURL }} </a>
+    <div>
+    Your original <a href='{{ originalURL }}'> {{ originalURL }} </a> has been shortened to:
+
+    <a id=shortlink href='{{ shortenedURL }}'> {{ shortenedURL }} </a>
+    </div>
   </body>
 </html>

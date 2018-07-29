@@ -3,23 +3,27 @@
 <html>
   <head>
     <title>A Fancy Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
   </head>
 
   <body>
-    <header>
-      <h1>A Simple URL Shortener</h1>
-    </header>
+    <div id="main-content">
+      <header>
+        <h1>A Simple URL Shortener</h1>
+      </header>
 
-    <main>
-    <form method="post" action="http://localhost:5000/submitURL">
-      <label for="url-box">URL</label>
-      <input id="url-box" type="text" name="url">
-      <input type="submit" value="Submit">
-    </form>
-    </main>
-    <footer>
-      Made in the Bronx.
-    </footer>
+      <main>
+      URLs are stripped of trailing slashes.
+      <form method="post" action="http://localhost:5000/submitURL">
+        <label for="url-box">URL</label>
+        <input id="url-box" type="text" name="url">
+        <input type="submit" value="Submit">
+      </form>
+      </main>
+      <footer>
+        <p>Made in the Bronx.</p>
+      </footer>
+    </div>
   </body>
 
 </html>
