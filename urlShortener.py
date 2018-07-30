@@ -18,7 +18,7 @@ from BaseConverter import BaseConverter
 
 app = Flask(__name__)
 CHARACTERS = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLNOPQRSTUVWXYZ"
-DOMAIN = 'http://localhost:5000/'
+DOMAIN = 'http://localhost:5600/'
 DBFILENAME = './url.db'
 
 converter = BaseConverter()
@@ -62,4 +62,4 @@ def redirect2(shortenedURL):
     return redirect(fullURL[0])
 
 if __name__ == '__main__':
-    app.run(port = 8080)
+    app.run(port = 5600)
